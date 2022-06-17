@@ -1,0 +1,69 @@
+/* .release{
+    margin: 1rem;
+    padding: 1rem;
+    width: 14rem;
+    text-align: center;
+    color: white;
+    font-size: 1.1rem;
+    background: #2b2b2b;
+    height: 17rem;
+}
+
+.release:hover{
+    border: solid;
+    border-color: #8c5df1;
+    cursor: pointer;
+}
+
+.year-text{
+    font-size: .8em;
+    padding-bottom: 0.7rem;
+}
+.type-text{
+    color: #8c5df1;
+    font-size: .8em;
+} */
+
+
+.release{
+    margin: 1rem;
+    padding: 1rem;
+    width: 26rem;
+    text-align: center;
+    color: white;
+    font-size: 1.1rem;
+    background: #2b2b2b;
+    display: flex;
+    height: 10rem;
+}
+
+.release:hover{
+    border: solid;
+    border-color: #8c5df1;
+    cursor: pointer;
+}
+
+.release-info-container{
+    position: relative;
+    width: -webkit-fill-available;
+    text-align: left;
+    
+}
+
+.release-info{
+    position: absolute;
+    bottom: 1rem;
+    padding-left: 1rem;
+}
+
+.year-text{
+    font-size: .8em;
+    padding-bottom: 0.7rem;
+    color: aqua;
+}
+.type-text{
+       font-size: .7em;
+       padding-top: 0.7rem;
+}
+
+

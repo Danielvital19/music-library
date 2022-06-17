@@ -1,0 +1,17 @@
+.results{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 5rem;
+    justify-content: center;
+}
+
+.pager{
+    display: flex;
+    justify-content: space-between;
+    width: 50rem;
+}
+
+.pager-container{
+    display: flex;
+    justify-content: center;
+}
