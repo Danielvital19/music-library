@@ -4,7 +4,16 @@ import { Release } from './Release'
 import ITrackData from '../types/Track';
 import "./Home.css";
 import { History } from './History';
+import styled from 'styled-components'
 
+const Button = styled.button`
+    color: white;
+    border-radius: 16px;
+    width: 2rem;
+    min-height: 2rem;
+    border-width: 0pc;
+    cursor: pointer;
+`
 
 export const Home: React.FC = () => {
     const [results, setResults] = useState([]);
@@ -60,9 +69,9 @@ export const Home: React.FC = () => {
         <>
             <div className="search-bar">
                 {artist && 
-                    <button className=" nav-button back-button" type="submit" onClick={() => clearSearch()}>
+                    <Button className="back-button" type="submit" onClick={() => clearSearch()}>
                         <img src="https://e7.pngegg.com/pngimages/744/634/png-clipart-arrow-computer-icons-arrow-angle-arrow-thumbnail.png" width="15" heigth="15"/> 
-                    </button>
+                    </Button>
                 }
                 <input
                     className="search-input"
@@ -71,9 +80,9 @@ export const Home: React.FC = () => {
                     value={text}
                     onChange={(e) => {setText(e.target.value)}}
                 />
-                <button className="nav-button search-button" type="submit" onClick={() => {text && makeSearch()}}>
+                <Button className="search-button" type="submit" onClick={() => {text && makeSearch()}}>
                     <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Search_Icon.svg" width="15" heigth="15"/> 
-                </button>
+                </Button>
             </div>
             { !artist ?
                 <div className="history">
