@@ -8,9 +8,8 @@ import "./index.css";
 ReactDOM.render(
     <Router>
       <div className="container">
-
         <Routes>
-            <Route path="/music-libary" element={<Home/>} />
+            <Route path="/music-library" element={<Home/>} />
             <Route path="/" element={<Home/>} />
             <Route path="/about" element={<About />} />
         </Routes>
