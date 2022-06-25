@@ -9,7 +9,6 @@ export const History: React.FC = ({history, selectElementFromHistory }: {history
             ? 
                 <>
                     <div className="title">Recent Searches</div>
-                    <div  className="instructions">Select one from the list</div>
                     {history.map((e, index) => <div className="search-item" key={index} onClick={()  => {selectElementFromHistory(e)}}>{e}</div>)}
                 </>
             :

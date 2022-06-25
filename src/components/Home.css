@@ -38,3 +38,27 @@
 .pager-button{
     cursor: pointer;
 }
+
+.nav-button{
+    color: white;
+    border-radius: 16px;
+    width: 2rem;
+    min-height: 2rem;
+    border-width: 0pc;
+    cursor: pointer;
+}
+
+.search-button{
+    margin-left: 0.5rem;
+}
+
+.not-found{
+    text-align: center;
+    padding-top: 3rem;
+    color: white;
+    font-size: 1.3rem;
+}
+
+.back-button{
+    margin-right: 0.5rem;
+}

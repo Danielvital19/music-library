@@ -13,6 +13,10 @@
 
 .search-item{
     color: white;
-    padding: 0.7rem;
+    padding: 0.3rem;
     cursor: pointer;
+}
+
+.search-item:hover{
+    color: aqua;
 }

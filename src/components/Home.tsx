@@ -51,9 +51,19 @@ export const Home: React.FC = () => {
         setArtist(element)
     }
 
+    const clearSearch = (): void => {
+        setArtist('');
+        setText('')
+    }
+
     return(
         <>
             <div className="search-bar">
+                {artist && 
+                    <button className=" nav-button back-button" type="submit" onClick={() => clearSearch()}>
+                        <img src="https://e7.pngegg.com/pngimages/744/634/png-clipart-arrow-computer-icons-arrow-angle-arrow-thumbnail.png" width="15" heigth="15"/> 
+                    </button>
+                }
                 <input
                     className="search-input"
                     type="text"
@@ -61,8 +71,8 @@ export const Home: React.FC = () => {
                     value={text}
                     onChange={(e) => {setText(e.target.value)}}
                 />
-                <button type="submit" onClick={() => {text && makeSearch()}}>
-                    <i className="fa fa-search"></i>
+                <button className="nav-button search-button" type="submit" onClick={() => {text && makeSearch()}}>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Search_Icon.svg" width="15" heigth="15"/> 
                 </button>
             </div>
             { !artist ?
@@ -70,25 +80,27 @@ export const Home: React.FC = () => {
                     <History history={history} selectElementFromHistory={selectElementFromHistory}/>
                 </div>
                 :
-                <>
-                    <div className='results'>
-                        {results &&
-                            results.map((release, index) => (
-                                <Release key={index} cover={release.cover_image} title={release.title} year={release.year} styles={release.style} country={release.country}/>
-                            ))}
-                    </div>
-                    <div className="pager-container">
-                        <div className="pager">
-                            <a className="pager-button" onClick={() => {page !== 1 && setPage(page - 1)}}>
-                                {'<'}
-                            </a>
-                            Page {page}
-                            <a className="pager-button"  onClick={() => {setPage(page + 1)}}>
-                                {'>'}
-                            </a>
+
+                results.length > 0 ? 
+                    <>
+                        <div className='results'>
+                            {results.map((release, index) => (
+                                    <Release key={index} cover={release.cover_image} title={release.title} year={release.year} styles={release.style} country={release.country}/>
+                                ))}
                         </div>
-                    </div>
-                </>
+                        <div className="pager-container">
+                            <div className="pager">
+                                <a className="pager-button" onClick={() => {page !== 1 && setPage(page - 1)}}>
+                                    {'<'}
+                                </a>
+                                Page {page}
+                                <a className="pager-button"  onClick={() => {setPage(page + 1)}}>
+                                    {'>'}
+                                </a>
+                            </div>
+                        </div>
+                    </>
+                : <div className="not-found"> No releases found for '{text}'</div>
             }
         </>
 
