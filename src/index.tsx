@@ -7,7 +7,7 @@ import "./index.css";
 
 ReactDOM.render(
     <Router>
-      <div>
+      <div className="container">
 
         <Routes>
             <Route path="/music-libary" element={<Home/>} />
