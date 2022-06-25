@@ -20,7 +20,7 @@ export const Release: React.FC = ({ title, cover, year, styles, country }: {titl
                 <div className="release-info">
                     <div className="year-text">{year}{country !== 'Unknown' && `, ${country}`}</div>
                     <div>{title}</div>
-                    { styles.length > 0 && <div className="type-text">{styles.join()}</div>}
+                    { styles?.length > 0 && <div className="type-text">{styles.join()}</div>}
                 </div>
             </div>
            

@@ -8,10 +8,33 @@
 .pager{
     display: flex;
     justify-content: space-between;
-    width: 50rem;
+    width: 8rem;
+    color: white;
 }
 
 .pager-container{
     display: flex;
     justify-content: center;
+}
+
+
+.search-input{
+    height: 2.3rem;
+    width: 37rem;
+    border-radius: 18px;
+    border-width: 0px;
+    padding-left: 30px;
+}
+
+.search-bar{
+    text-align: center;
+}
+
+.history{
+    text-align: center;
+}
+
+
+.pager-button{
+    cursor: pointer;
 }

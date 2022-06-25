@@ -1,4 +1,5 @@
 {
+  "homepage": "https://danielvital19.github.io/music-library/home",
   "name": "react-app",
   "version": "1.0.0",
   "description": "",
@@ -6,14 +7,20 @@
   "scripts": {
     "dev": "react",
     "start": "webpack serve --port 3000",
-    "build": "NODE_ENV=production webpack"
+    "build": "NODE_ENV=production webpack",
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "babel-jest": "^28.1.1",
     "css-loader": "^6.7.1",
+    "gh-pages": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.1",
+    "react-test-renderer": "^18.2.0",
     "ts-loader": "^9.3.0",
     "typescript": "^4.7.3",
     "webpack": "^5.73.0",
@@ -21,7 +28,9 @@
     "webpack-dev-server": "^4.9.2"
   },
   "dependencies": {
+    "babel-plugin-macros": "^3.1.0",
     "fetch": "^1.1.0",
+    "jest": "^28.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0"

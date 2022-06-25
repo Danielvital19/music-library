@@ -10,7 +10,9 @@ ReactDOM.render(
       <div>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            {/* <Link to="/home">Home</Link> */}
+            {/* added because of gh-pages weird behaivour */}
+            <Link to="/music-libary">Home</Link>
           </li>
           <li>
             <Link to="/about">About</Link>
@@ -18,7 +20,8 @@ ReactDOM.render(
         </ul>
 
         <Routes>
-            <Route path="/" element={<Home message='from index!'/>} />
+            <Route path="/music-libary" element={<Home/>} />
+            <Route path="/" element={<Home/>} />
             <Route path="/about" element={<About />} />
         </Routes>
       </div>
